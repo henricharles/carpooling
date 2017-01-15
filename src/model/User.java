@@ -5,9 +5,11 @@ import java.time.LocalDate;
 public class User {
 	int userId;
 	String fullName;
-	String gender;
+	int gender;
 	String state;
 	String city;
+	String street;
+	
 	int zipcode;
 	int birthYear;
 	String email;
@@ -26,10 +28,10 @@ public class User {
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	public String getGender() {
+	public int getGender() {
 		return gender;
 	}
-	public void setGender(String gender) {
+	public void setGender(int gender) {
 		this.gender = gender;
 	}
 	public String getState() {
@@ -80,5 +82,10 @@ public class User {
 	public void setDateUpdate(LocalDate dateUpdate) {
 		this.dateUpdate = dateUpdate;
 	}
-
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
 }

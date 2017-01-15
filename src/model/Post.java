@@ -1,14 +1,15 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Post {
 	int postId;
 	int UserId;
 	String post;
 	int posttype;
-	LocalDate dateCreated;
-	LocalDate dateUpdate;
+	Date dateCreated;
+	Date dateUpdate;
 	public int getPostId() {
 		return postId;
 	}
@@ -33,16 +34,16 @@ public class Post {
 	public void setPosttype(int posttype) {
 		this.posttype = posttype;
 	}
-	public LocalDate getDateCreated() {
+	public Date getDateCreated() {
 		return dateCreated;
 	}
-	public void setDateCreated(LocalDate dateCreated) {
+	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
 	}
-	public LocalDate getDateUpdate() {
+	public Date getDateUpdate() {
 		return dateUpdate;
 	}
-	public void setDateUpdate(LocalDate dateUpdate) {
+	public void setDateUpdate(Date dateUpdate) {
 		this.dateUpdate = dateUpdate;
 	}
 	

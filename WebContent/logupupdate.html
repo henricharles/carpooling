@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<div>
+    <form  id="formUpdate" method="POST" >
+       <div class="form2">
+    <input type="text" class="form-control" placeholder="Full Name" name="name"></input><br>
+    Gender<br> <input type="radio" name="gender" value="male" /> Male
+  <input type="radio" name="gender" value="female"/> Female 
+  <fieldset >
+    <legend> Adress</legend>
+    <input  type="text"  class="form-control" placeholder="State" name="state"></input><br>
+    <input type="text" class="form-control" placeholder="City" name="city" ></input><br>
+    <input type="text" class="form-control" placeholder="Street" name="street"></input><br>
+    <input  type="text"  class="form-control" placeholder="Zip Code" name="zipcode"></input><br>
+    
+      </fieldset>
+    <input type="date"  id="bdate"  class="form-control"   name="birth"></input><br>
+    
+    
+    <input type="email"  class="form-control" placeholder="Email " name="email"></input><br>
+    <input type="password"  name="password" class="form-control" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"></input><br>
+    <!--<input id="submit" type="submit" class="btn" value="Sign Up"> </input>-->
+    <input type = "submit" class = "btn btn-primary" value="update" id="update"/>
+ </div>
+</form> 
+</div>
+
+  

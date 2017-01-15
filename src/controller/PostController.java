@@ -6,36 +6,36 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import service.PostService;
 
 /**
  * Servlet implementation class PostController
  */
 @WebServlet("/PostController")
 public class PostController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public PostController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	PostService service=new PostService();
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		doPost(request,response);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		
+		
+		String post=request.getParameter("postoffereing");
+		int type=Integer.parseInt(request.getParameter("type"));
+		HttpSession session =request.getSession();
+		int uid=(Integer) session.getAttribute("id");
+		service.create(uid, post, type);
+		response.sendRedirect("home.jsp");
+		//service.create(1, "I need a rid to Iowa city", 1);
+		
+
 	}
 
 }
